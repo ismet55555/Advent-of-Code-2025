@@ -25,6 +25,12 @@ cd day_x
 cargo run -q
 ```
 
+Running it continously to watch changes:
+
+```sh
+watch -c -t -n 2 "cargo test -q"
+```
+
 ## Tests For Each Day
 
 Tests are based on the sample input provided for each day
@@ -33,6 +39,12 @@ Tests are based on the sample input provided for each day
 ```sh
 cd day_x
 cargo test -q
+```
+
+Running continous tests to monitor changes:
+
+```sh
+watch -c -t -n 2 "cargo run -q"
 ```
 
 ## Debugging Code Issues
