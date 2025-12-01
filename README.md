@@ -20,16 +20,15 @@ Copy-Item -Recurse day_template -Destination day_1
 
 ## Running Code For Each Day
 
-- Run the code
-
-  - ```sh
-    cd day_x
-    cargo run -q
-    ```
+```sh
+cd day_x
+cargo run -q
+```
 
 ## Tests For Each Day
 
-Tests are based on the sample input provided for each day.
+Tests are based on the sample input provided for each day
+(i.e. `./inputs/sample_part1.txt`).
 
 ```sh
 cd day_x
