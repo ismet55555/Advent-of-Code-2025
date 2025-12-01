@@ -5,6 +5,19 @@ This time 12 days only.
 
 Language: [Rust](https://www.rust-lang.org/)
 
+## Setup For Each Day
+
+Copy the `day_template/` directory and rename it as the
+current day (i.e. `day_1`):
+
+```sh
+# Linux/MacOS
+cp -r day_template day_1
+
+# Windows Powershell
+Copy-Item -Recurse day_template -Destination day_1
+```
+
 ## Running Code For Each Day
 
 - Run the code
