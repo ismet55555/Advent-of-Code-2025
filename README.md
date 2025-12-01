@@ -28,6 +28,7 @@ cargo run -q
 Running it continously to watch changes:
 
 ```sh
+cd day_x
 watch -c -t -n 2 "cargo run -q"
 ```
 
@@ -44,6 +45,7 @@ cargo test -q
 Running continous tests to monitor changes:
 
 ```sh
+cd day_x
 watch -c -t -n 2 "cargo test -q"
 ```
 
