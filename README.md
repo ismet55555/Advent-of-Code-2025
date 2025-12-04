@@ -25,6 +25,12 @@ cd day_x
 cargo run -q
 ```
 
+Run with debug logging on:
+
+```sh
+RUST_LOG=debug cargo run -q
+```
+
 Running it continously to watch changes:
 
 ```sh

@@ -5,6 +5,7 @@
 #![allow(dead_code)]
 
 use anyhow::Result;
+use log::{debug, error, info, warn};
 use std::fs;
 use std::fs::File;
 use std::io::prelude::*;
@@ -35,6 +36,9 @@ fn part_2(input: String) -> i32 {
 
 /// Main
 fn main() -> Result<()> {
+    // Initialize the logger at the start of main
+    env_logger::init();
+
     let part_1_input = load_text_file("inputs/sample_part1.txt");
     let part_1_output = part_1(part_1_input);
     println!("Part 1: {}\n\n", part_1_output);

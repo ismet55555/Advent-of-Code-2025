@@ -27,6 +27,24 @@ input
   .sum()
 ```
 
+```rust
+// Return a vector of vectors
+// Parse each line to be a vector of i32 numbers
+fn parse_new_lines_into_vectors(input: String) -> Vec<Vec<i32>> {
+    let out: Vec<_> = input
+        .lines()
+        .map(|line| {
+            line.chars()
+                .filter_map(|c| c.to_digit(10))
+                .map(|d| d as i32)
+                .collect()
+        })
+        .collect();
+
+    out
+}
+```
+
 - `itertools`
 - `regex`
   - Can use named capture groups to later refernce
