@@ -1,0 +1,13 @@
+[package]
+authors = ["Ismet Handzic"]
+name = "day_X"
+version = "0.1.0"
+edition = "2024"            # Reference https://doc.rust-lang.org/edition-guide/rust-2021/index.html
+
+[dependencies] # Reference: https://doc.rust-lang.org/cargo/guide/dependencies.html
+anyhow = "1.0"
+itertools = "0.14"
+nom = "8.0"
+regex = "1.12"
+log = "0.4"
+env_logger = "0.11"

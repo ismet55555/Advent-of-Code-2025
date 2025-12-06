@@ -12,6 +12,11 @@ use std::io::prelude::*;
 
 //////////////////////////////////////////////////////////////////////////////
 
+/// Load the raw text file into a string
+///
+/// # Arguments
+///
+/// * `filepath` - File to load into a string
 fn load_text_file(filepath: &str) -> String {
     println!("Loading file: {} ...", filepath);
     let contents: String = fs::read_to_string(filepath).expect("ERROR: Failed to read input file");
@@ -36,8 +41,13 @@ fn part_2(input: String) -> i32 {
 
 /// Main
 fn main() -> Result<()> {
-    // Initialize the logger at the start of main
-    env_logger::init();
+    // Initialize the logger at the start of main - plain logs
+    env_logger::builder()
+        .format(|buf, record| {
+            use std::io::Write;
+            writeln!(buf, "{}", record.args())
+        })
+        .init();
 
     let part_1_input = load_text_file("inputs/sample_part1.txt");
     let part_1_output = part_1(part_1_input);
