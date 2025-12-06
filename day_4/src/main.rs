@@ -5,7 +5,6 @@
 #![allow(dead_code)]
 
 use anyhow::Result;
-use itertools::Itertools;
 use log::{debug, error, info, warn};
 use std::fs;
 use std::fs::File;
@@ -67,7 +66,7 @@ impl Grid {
                 let row_index = row as i32 + row_step;
                 let col_index = col as i32 + col_step;
 
-                // Check rows foundries
+                // Check rows boundaries
                 if row_index < 0 {
                     continue;
                 }
@@ -75,7 +74,7 @@ impl Grid {
                     continue;
                 }
 
-                // Check column foundries
+                // Check column boundaries
                 if col_index < 0 {
                     continue;
                 }
